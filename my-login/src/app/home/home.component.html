@@ -1,0 +1,46 @@
+<!-- home.component.html -->
+
+<div class="container">
+    <form (submit)="submitForm()">
+      <div>
+        <label for="nameField">Name</label>
+        <input type="text" id="nameField" name="nameField" [(ngModel)]="inputFieldValue">
+      </div>
+      
+
+      <div>
+        <label for="emailField">Email</label>
+        <input type="text" id="emailField" name="emailField" [(ngModel)]="inputFieldValue2">
+      </div>
+
+      <div>
+        <label for="mobileField">Mobile</label>
+        <input type="text" id="mobileField" name="mobileField" [(ngModel)]="inputFieldValue3">
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+   
+   <!-- Table to display submitted data -->
+   <table *ngIf="submittedData">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Action</th> <!-- Added column for actions -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of submittedData; let i = index">
+        <td>{{ data.name }}</td>
+        <td>{{ data.email }}</td>
+        <td>{{ data.mobile }}</td>
+        <td>
+          <button (click)="editData(i)">Edit</button> <!-- Button for editing -->
+          <button (click)="deleteData(i)">Delete</button> <!-- Button for deleting -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

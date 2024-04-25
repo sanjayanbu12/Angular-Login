@@ -1,0 +1,88 @@
+/* home.component.css */
+
+/* Style for the container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Adjust alignment as needed */
+    max-width: 100%; /* Adjust maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  /* Style for the form container */
+  .form-container {
+    margin-right: 20px; /* Adjust spacing between form and table */
+  }
+  
+  /* Style for the table container */
+  .table-container {
+    flex-grow: 1; /* Allow the table container to grow to fill available space */
+  }
+  
+  /* Style for the form */
+  form {
+    margin-top: 20px;
+  }
+  
+  /* Style for the form labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for the input fields */
+  input[type="text"] {
+    width: 400px; /* Full width */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Style for the submit button */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for the submit button */
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style for the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Style for table headers */
+  th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style for table rows */
+  tr {
+    border: 1px solid #ddd;
+  }
+  
+  /* Style for table cells */
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  /* Hover effect for table rows */
+  tr:hover {
+    background-color: #f2f2f2;
+  }
+  
