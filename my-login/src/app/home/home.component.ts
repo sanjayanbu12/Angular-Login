@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -26,13 +26,20 @@ export class HomeComponent {
   }
 
   editData(index: number) {
-    // Assuming you have a separate form for editing, you can populate it with data of the selected item for editing
-    this.inputFieldValue = this.submittedData[index].name;
-    this.inputFieldValue2 = this.submittedData[index].email;
-    this.inputFieldValue3 = this.submittedData[index].mobile;
+    // Prompt the user for new values
+    const newData = this.submittedData[index];
+    const editedName = prompt('Enter new name:', newData.name);
+    const editedEmail = prompt('Enter new email:', newData.email);
+    const editedMobile = prompt('Enter new mobile:', newData.mobile);
 
-    // Optionally, you can remove the item from the array after populating the form
-    // this.submittedData.splice(index, 1);
+    // Update the data directly in the array if new values are provided
+    if (editedName !== null && editedEmail !== null && editedMobile !== null) {
+      this.submittedData[index] = {
+        name: editedName,
+        email: editedEmail,
+        mobile: editedMobile
+      };
+    }
   }
 
   deleteData(index: number) {
